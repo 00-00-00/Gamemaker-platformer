@@ -12,6 +12,7 @@
     <sprite>sprites\spr_tile</sprite>
     <sprite>sprites\spr_tile_end</sprite>
     <sprite>sprites\spr_tile_begin</sprite>
+    <sprite>sprites\spr_decor_1</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -20,6 +21,9 @@
     <object>objects\obj_tile_begin</object>
     <object>objects\obj_tile</object>
     <object>objects\obj_tile_end</object>
+    <object>objects\obj_obstacle</object>
+    <object>objects\obj_decor</object>
+    <object>objects\obj_decor_1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

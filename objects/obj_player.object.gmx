@@ -63,7 +63,7 @@ hsp = move * moveSpeed;
 
 if( vsp &lt; 10 ) vsp += grav;
 
-if(place_meeting(x, y+1, obj_tile))
+if(place_meeting(x, y+1, obj_obstacle))
 {   
     vsp = jump;
     grounded = false;    
@@ -92,15 +92,15 @@ else
     }
 }
 
-if(place_meeting(x, y + vsp, obj_tile)) {
-    while(!place_meeting(x, y + sign(vsp), obj_tile)){
+if(place_meeting(x, y + vsp, obj_obstacle)) {
+    while(!place_meeting(x, y + sign(vsp), obj_obstacle)){
         y += sign(vsp);
     }
     vsp = 0;
 }
 
-if(place_meeting(x + hsp, y, obj_tile)) {
-    while(!place_meeting(x + sign(hsp), y , obj_tile)){
+if(place_meeting(x + hsp, y, obj_obstacle)) {
+    while(!place_meeting(x + sign(hsp), y , obj_obstacle)){
         x += sign(hsp);
     }
     hsp = 0;
