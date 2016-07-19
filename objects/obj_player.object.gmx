@@ -92,6 +92,8 @@ else
     }
 }
 
+
+
 if(place_meeting(x, y + vsp, obj_obstacle)) {
     while(!place_meeting(x, y + sign(vsp), obj_obstacle)){
         y += sign(vsp);
@@ -104,6 +106,12 @@ if(place_meeting(x + hsp, y, obj_obstacle)) {
         x += sign(hsp);
     }
     hsp = 0;
+}
+
+if(place_meeting(x, y , obj_obstacle)) {
+   while(place_meeting(x, y , obj_obstacle)) {
+        y--;
+   }
 }
 
 x += hsp ;

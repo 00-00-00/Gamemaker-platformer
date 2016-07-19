@@ -16,6 +16,7 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_wall_begin</sprite>
     <sprite>sprites\spr_wall_end</sprite>
+    <sprite>sprites\spr_gate</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -30,6 +31,7 @@
     <object>objects\obj_wall_begin</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_wall_end</object>
+    <object>objects\obj_gate</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
