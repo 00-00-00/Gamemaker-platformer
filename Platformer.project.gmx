@@ -19,9 +19,9 @@
     <sprite>sprites\spr_gate</sprite>
     <sprite>sprites\spr_flag</sprite>
     <sprite>sprites\spr_block_left</sprite>
-    <sprite>sprites\spr_block</sprite>
     <sprite>sprites\spr_block_bottom</sprite>
     <sprite>sprites\spr_block_right</sprite>
+    <sprite>sprites\spr_block</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
