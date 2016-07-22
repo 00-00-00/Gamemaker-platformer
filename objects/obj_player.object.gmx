@@ -65,8 +65,12 @@ if( vsp &lt; 10 ) vsp += grav;
 
 if(place_meeting(x, y+1, obj_tangible))
 {   
-    vsp = jump;
-    grounded = false;    
+    vsp = jump;   
+}
+
+if(place_meeting(x, y+5, obj_tangible))
+{
+    grounded = false;
 }
 else {
     grounded = true;

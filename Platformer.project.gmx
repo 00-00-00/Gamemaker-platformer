@@ -10,6 +10,8 @@
     <sprite>sprites\spr_player_idle</sprite>
     <sprite>sprites\spr_player_move</sprite>
     <sprite>sprites\spr_tile</sprite>
+    <sprite>sprites\spr_pressure_plate</sprite>
+    <sprite>sprites\mask_pressure_plate</sprite>
     <sprite>sprites\spr_tile_end</sprite>
     <sprite>sprites\spr_tile_begin</sprite>
     <sprite>sprites\spr_decor_1</sprite>
@@ -30,6 +32,7 @@
     <object>objects\obj_obstacle</object>
     <object>objects\obj_movable</object>
     <object>objects\obj_decor</object>
+    <object>objects\obj_switches</object>
     <object>objects\obj_player</object>
     <object>objects\obj_decor_1</object>
     <object>objects\obj_tile</object>
@@ -41,6 +44,7 @@
     <object>objects\obj_gate</object>
     <object>objects\obj_flag</object>
     <object>objects\obj_block</object>
+    <object>objects\obj_pressure_plate</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
