@@ -25,26 +25,38 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( vsp &lt; 10 ) vsp += grav;
+            <string>moveSpeed = 2;
+drag = 0.5;
 
+if( vsp &lt; 10 ) vsp += grav;
 
-if(place_meeting(x, y + vsp, obj_obstacle)) {
-    while(!place_meeting(x, y + sign(vsp), obj_obstacle)){
+if(place_meeting(x, y+5, obj_tangible))
+{
+    grounded = false;
+}
+else {
+    grounded = true;
+}
+
+if(grounded &amp;&amp; hsp != 0) hsp -= sign(hsp)*drag;
+
+if(place_meeting(x, y + vsp, obj_tangible)) {
+    while(!place_meeting(x, y + sign(vsp), obj_tangible)){
         y += sign(vsp);
     }
     vsp = 0;
     
     mask_index = spr_block_bottom;
-    if(place_meeting(x, y , obj_obstacle)) {
-        while(place_meeting(x, y , obj_obstacle)) {
+    if(place_meeting(x, y , obj_tangible)) {
+        while(place_meeting(x, y , obj_tangible)) {
              y--;
         }
     }
     mask_index = spr_block;
 }
 
-if(place_meeting(x + hsp, y, obj_obstacle)) {
-    while(!place_meeting(x + sign(hsp), y , obj_obstacle)){
+if(place_meeting(x + hsp, y, obj_tangible)) {
+    while(!place_meeting(x + sign(hsp), y , obj_tangible)){
         x += sign(hsp);
     }
     hsp = 0;
@@ -52,12 +64,12 @@ if(place_meeting(x + hsp, y, obj_obstacle)) {
 else {
     mask_index = spr_block_left;
     if(place_meeting(x - 1, y, obj_player)){
-        x++ ;
+        hsp = moveSpeed ;
     }
     
     mask_index = spr_block_right;
     if(place_meeting(x + 1, y, obj_player)){
-        x-- ;
+        hsp = -moveSpeed ;
     }
     mask_index = spr_block;
 }
